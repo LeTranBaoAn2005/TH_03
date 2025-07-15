@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .thanh-dieu-huong {
+            background-color: #2c3e50;
+            padding: 15px 0;
+        }
+
+        .danh-sach-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        
+
+        }
+
+        .muc-menu {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .lien-ket-menu {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            display: block;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .lien-ket-menu:hover {
+            color: #f1c40f;
+        }
+
+        .lien-ket-menu::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #f1c40f;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .lien-ket-menu:hover::after {
+            width: 80%;
+        }
+
+        .lien-ket-menu.active {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .lien-ket-menu.active::after {
+            width: 80%;
+        }
+            .muc-menu {
+                margin: 5px 0;
+            }
+    </style>
+</head>
+<body>
+    <nav class="thanh-dieu-huong">
+        <ul class="danh-sach-menu">
+            <li class="muc-menu">
+                <a href="#" class="lien-ket-menu active">Trang chủ</a>
+            </li>
+            <li class="muc-menu">
+                <a href="#" class="lien-ket-menu">Giới thiệu</a>
+            </li>
+            <li class="muc-menu">
+                <a href="#" class="lien-ket-menu">Sản phẩm</a>
+            </li>
+            <li class="muc-menu">
+                <a href="#" class="lien-ket-menu">Dịch vụ</a>
+            </li>
+            <li class="muc-menu">
+                <a href="#" class="lien-ket-menu">Liên hệ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div style="padding: 50px; text-align: center;">
+        <h1>Nội dung trang web</h1>
+        <p>Di chuột lên thanh menu để xem hiệu ứng</p>
+    </div>
+</body>
+</html>
