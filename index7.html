@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư viện ảnh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .thu-vien-anh {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .anh-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            aspect-ratio: 1/1;
+        }
+
+        .anh-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .anh-mota {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>THƯ VIỆN ẢNH</h1>
+    
+    <div class="thu-vien-anh">
+        <div class="anh-item">
+            <img src="https://canineweekly.com/wp-content/uploads/2019/01/alaskan-malamute-puppy.jpg" alt="Chó 1">
+            <div class="anh-mota">
+                <h3>Chó Alaska</h3>
+                <p>Giống chó kéo xe mạnh mẽ</p>
+            </div>
+        </div>
+        
+        <div class="anh-item">
+            <img src="https://th.bing.com/th/id/R.c433ebefbb36e50d70672faa6f98523a?rik=JKHG8FCAaQl%2bDw&pid=ImgRaw&r=0" alt="Chó 2">
+            <div class="anh-mota">
+                <h3>Chó Poodle</h3>
+                <p>Thông minh và dễ thương</p>
+            </div>
+        </div>
+        
+        <div class="anh-item">
+            <img src="https://th.bing.com/th/id/R.b60be4b018051087bf8917d3a7d71d7d?rik=N9p%2bDMFxYNnX0A&riu=http%3a%2f%2fs1.bwallpapers.com%2fwallpapers%2f2013%2f12%2f26%2fadorable-husky-puppies_061410.jpg&ehk=olhShoEQRA4d6Oj%2fMytIUYxhAI5V%2fIh5zm8cwejyeH8%3d&risl=&pid=ImgRaw&r=0" alt="Chó 3">
+            <div class="anh-mota">
+                <h3>Chó Husky</h3>
+                <p>Nổi tiếng với đôi mắt xanh</p>
+            </div>
+        </div>
+        
+        <div class="anh-item">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.6hrk2mHAwT4dQk5-FrePBgHaHF?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chó 4">
+            <div class="anh-mota">
+                <h3>Chó Corgi</h3>
+                <p>Ngắn chân nhưng đáng yêu</p>
+            </div>
+        </div>
+        
+        <div class="anh-item">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.XuMG8EYzUYPJxFG7-BYY1QHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Chó 5">
+            <div class="anh-mota">
+                <h3>Chó Golden</h3>
+                <p>Thân thiện và trung thành</p>
+            </div>
+        </div>
+        
+        <div class="anh-item">
+            <img src="https://th.bing.com/th/id/R.fe279b8cfc4a11a3387906e2728bfebc?rik=%2bxN76gLGq9za4A&pid=ImgRaw&r=0" alt="Chó 6">
+            <div class="anh-mota">
+                <h3>Chó Bulldog</h3>
+                <p>Mặt nhăn độc đáo</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
