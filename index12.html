@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo Sát Ý Kiến</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .form-khao-sat {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .tieu-de {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .nhom-cau-hoi {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cau-hoi {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .nhom-lua-chon {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .lua-chon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .o-nhap-text {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+            min-height: 120px;
+            resize: vertical;
+            transition: border 0.3s;
+        }
+
+        .o-nhap-text:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+        }
+
+        .nut-gui {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 30px auto 0;
+            transition: background 0.3s;
+        }
+
+        .nut-gui:hover {
+            background: #2980b9;
+        }
+
+        input[type="radio"], 
+        input[type="checkbox"] {
+            transform: scale(1.2);
+            margin-right: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .nhom-lua-chon {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-khao-sat">
+        <h1 class="tieu-de">KHẢO SÁT Ý KIẾN KHÁCH HÀNG</h1>
+        
+        <form>
+
+            <div class="nhom-cau-hoi">
+                <div class="cau-hoi">1. Bạn đánh giá chất lượng sản phẩm của chúng tôi như thế nào?</div>
+                <div class="nhom-lua-chon">
+                    <label class="lua-chon">
+                        <input type="radio" name="danh-gia" value="rat-tot"> Rất tốt
+                    </label>
+                    <label class="lua-chon">
+                        <input type="radio" name="danh-gia" value="tot"> Tốt
+                    </label>
+                    <label class="lua-chon">
+                        <input type="radio" name="danh-gia" value="binh-thuong"> Bình thường
+                    </label>
+                    <label class="lua-chon">
+                        <input type="radio" name="danh-gia" value="khong-hai-long"> Không hài lòng
+                    </label>
+                </div>
+            </div>
+            
+
+            <div class="nhom-cau-hoi">
+                <div class="cau-hoi">2. Bạn biết đến chúng tôi qua kênh nào? (Có thể chọn nhiều)</div>
+                <div class="nhom-lua-chon">
+                    <label class="lua-chon">
+                        <input type="checkbox" name="kenh[]" value="facebook"> Facebook
+                    </label>
+                    <label class="lua-chon">
+                        <input type="checkbox" name="kenh[]" value="google"> Google
+                    </label>
+                    <label class="lua-chon">
+                        <input type="checkbox" name="kenh[]" value="ban-be"> Bạn bè giới thiệu
+                    </label>
+                    <label class="lua-chon">
+                        <input type="checkbox" name="kenh[]" value="khac"> Khác
+                    </label>
+                </div>
+            </div>
+            
+
+            <div class="nhom-cau-hoi">
+                <div class="cau-hoi">3. Ý kiến đóng góp của bạn để chúng tôi cải thiện dịch vụ:</div>
+                <textarea class="o-nhap-text" name="y-kien"></textarea>
+            </div>
+            
+            <button type="submit" class="nut-gui">GỬI KHẢO SÁT</button>
+        </form>
+    </div>
+</body>
+</html>
