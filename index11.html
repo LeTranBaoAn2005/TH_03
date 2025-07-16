@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-dang-nhap {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .nhom-input {
+            margin-bottom: 20px;
+        }
+
+        .nhan {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .o-nhap {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        .o-nhap:focus {
+            border-color: #4285f4;
+            box-shadow: 0 0 0 2px rgba(66,133,244,0.2);
+            outline: none;
+        }
+
+        .nut-dang-nhap {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin: 20px auto 0;
+        }
+
+        .nut-dang-nhap:hover {
+            background-color: #3367d6;
+        }
+
+        .tieu-de-form {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-dang-nhap">
+        <h2 class="tieu-de-form">ĐĂNG NHẬP HỆ THỐNG</h2>
+        
+        <form>
+            <div class="nhom-input">
+                <label for="ten-dang-nhap" class="nhan">Tên đăng nhập</label>
+                <input type="text" id="ten-dang-nhap" class="o-nhap" placeholder="Nhập tên đăng nhập" required>
+            </div>
+            
+            <div class="nhom-input">
+                <label for="mat-khau" class="nhan">Mật khẩu</label>
+                <input type="password" id="mat-khau" class="o-nhap" placeholder="Nhập mật khẩu" required>
+            </div>
+            
+            <button type="submit" class="nut-dang-nhap">Đăng Nhập</button>
+        </form>
+    </div>
+</body>
+</html>
