@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đơn Hàng</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            color: #333;
+        }
+
+        .form-thanh-toan {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .tieu-de {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .noi-dung {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .cot-trai, .cot-phai {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nhom-input {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .phuong-thuc {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .phuong-thuc:hover {
+            border-color: #3498db;
+            background: #f8f9fa;
+        }
+
+        .phuong-thuc input {
+            margin-right: 10px;
+        }
+
+        .nut-thanh-toan {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+
+        .nut-thanh-toan:hover {
+            background: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+            .noi-dung {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-thanh-toan">
+        <div class="tieu-de">
+            <h2>THANH TOÁN ĐƠN HÀNG</h2>
+        </div>
+        
+        <form class="noi-dung">
+
+            <div class="cot-trai">
+                <h3>Thông tin người nhận</h3>
+                
+                <div class="nhom-input">
+                    <label for="ho-ten">Họ và tên</label>
+                    <input type="text" id="ho-ten" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="so-dt">Số điện thoại</label>
+                    <input type="tel" id="so-dt" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="dia-chi">Địa chỉ nhận hàng</label>
+                    <input type="text" id="dia-chi" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="tinh">Tỉnh/Thành phố</label>
+                    <select id="tinh" required>
+                        <option value="">Chọn Tỉnh/TP</option>
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="hcm">TP.Hồ Chí Minh</option>
+                        <option value="danang">Đà Nẵng</option>
+                    </select>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="quan">Quận/Huyện</label>
+                    <select id="quan" required>
+                        <option value="">Chọn Quận/Huyện</option>
+                    </select>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="ghi-chu">Ghi chú</label>
+                    <input type="text" id="ghi-chu" placeholder="Ghi chú địa chỉ...">
+                </div>
+            </div>
+            
+
+            <div class="cot-phai">
+                <h3>Phương thức thanh toán</h3>
+                
+                <div class="nhom-input">
+                    <label>Chọn phương thức:</label>
+                    
+                    <label class="phuong-thuc">
+                        <input type="radio" name="phuong-thuc" value="cod" checked>
+                        Thanh toán khi nhận hàng (COD)
+                    </label>
+                    
+                    <label class="phuong-thuc">
+                        <input type="radio" name="phuong-thuc" value="bank">
+                        Chuyển khoản ngân hàng
+                    </label>
+                    
+                    <label class="phuong-thuc">
+                        <input type="radio" name="phuong-thuc" value="momo">
+                        Ví điện tử MoMo
+                    </label>
+                    
+                    <label class="phuong-thuc">
+                        <input type="radio" name="phuong-thuc" value="vnpay">
+                        VNPay
+                    </label>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="ma-giam-gia">Mã giảm giá (nếu có)</label>
+                    <input type="text" id="ma-giam-gia" placeholder="Nhập mã giảm giá">
+                </div>
+                
+                <div class="nhom-input">
+                    <h4>Tóm tắt đơn hàng</h4>
+                    <div style="border: 1px solid #eee; padding: 15px; border-radius: 5px;">
+                        <p>Sản phẩm: <strong>Áo hoodie</strong></p>
+                        <p>Số lượng: <strong>1</strong></p>
+                        <p>Tổng tiền: <strong>280.000đ</strong></p>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="nut-thanh-toan">HOÀN TẤT THANH TOÁN</button>
+        </form>
+    </div>
+</body>
+</html>

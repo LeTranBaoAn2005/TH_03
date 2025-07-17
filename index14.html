@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Phản Hồi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .form {
+            display: grid;
+            gap: 15px;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .sao-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .mo-ta-danh-gia {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .sao {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .sao input[type="radio"] {
+            display: none;
+        }
+        
+        .sao label {
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .sao label:hover,
+        .sao input[type="radio"]:checked ~ label {
+            color: #f1c40f;
+        }
+        
+        button {
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Phản Hồi</h2>
+    
+    <form class="form">
+        <div>
+            <label>Họ tên:</label>
+            <input type="text" required>
+        </div>
+        
+        <div>
+            <label>Email:</label>
+            <input type="email" required>
+        </div>
+        
+        <div>
+            <label>Đánh giá:</label>
+            <div class="sao-container">
+                <span class="mo-ta-danh-gia">Rất tốt</span>
+                <div class="sao">
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+                </div>
+                <span class="mo-ta-danh-gia">Rất tệ</span>
+            </div>
+        </div>
+        
+        <div>
+            <label>Loại phản hồi:</label>
+            <select>
+                <option>Góp ý</option>
+                <option>Khiếu nại</option>
+                <option>Hỏi đáp</option>
+            </select>
+        </div>
+        
+        <div>
+            <label>Nội dung:</label>
+            <textarea rows="5" required></textarea>
+        </div>
+        
+        <button type="submit">Gửi Phản Hồi</button>
+    </form>
+</body>
+</html>
