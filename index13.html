@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Bàn Quán Ăn</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+            color: #333;
+        }
+
+        .form-dat-ban {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .tieu-de-form {
+            background: #e74c3c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .noi-dung-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .cot-trai, .cot-phai {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nhom-input {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select, textarea {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #e74c3c;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+        }
+
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .nut-dat-ban {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            grid-column: 1 / -1;
+            justify-self: center;
+            margin-top: 20px;
+        }
+
+        .nut-dat-ban:hover {
+            background: #c0392b;
+        }
+
+        @media (max-width: 768px) {
+            .noi-dung-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-dat-ban">
+        <div class="tieu-de-form">
+            <h2>ĐẶT BÀN TRƯỚC</h2>
+            <p>Vui lòng điền đầy đủ thông tin bên dưới</p>
+        </div>
+        
+        <form class="noi-dung-form">
+            <div class="cot-trai">
+                <div class="nhom-input">
+                    <label for="ho-ten">Họ và tên</label>
+                    <input type="text" id="ho-ten" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="so-dien-thoai">Số điện thoại</label>
+                    <input type="tel" id="so-dien-thoai" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="ngay-den">Ngày đến</label>
+                    <input type="date" id="ngay-den" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="gio-den">Giờ đến</label>
+                    <input type="time" id="gio-den" required>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="so-nguoi">Số người</label>
+                    <select id="so-nguoi" required>
+                        <option value="">Chọn số người</option>
+                        <option value="1">1 người</option>
+                        <option value="2">2 người</option>
+                        <option value="3-4">3-4 người</option>
+                        <option value="5-6">5-6 người</option>
+                        <option value="7+">7+ người</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="cot-phai">
+                <div class="nhom-input">
+                    <label for="yeu-cau-dac-biet">Yêu cầu đặc biệt</label>
+                    <textarea id="yeu-cau-dac-biet" placeholder="Ví dụ: Bàn cạnh cửa sổ, ghế cao cho trẻ em, yêu cầu về thức ăn..."></textarea>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="loai-ban">Loại bàn</label>
+                    <select id="loai-ban">
+                        <option value="">Không yêu cầu</option>
+                        <option value="thuong">Bàn thường</option>
+                        <option value="vip">Bàn VIP</option>
+                        <option value="phong-rieng">Phòng riêng</option>
+                    </select>
+                </div>
+                
+                <div class="nhom-input">
+                    <label for="ghi-chu">Ghi chú thêm</label>
+                    <textarea id="ghi-chu" placeholder="Thông tin bổ sung..."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="nut-dat-ban">ĐẶT BÀN NGAY</button>
+        </form>
+    </div>
+</body>
+</html>
