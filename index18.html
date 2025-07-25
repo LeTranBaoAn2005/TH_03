@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Tin Tức</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .article-image-container {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .article-card:hover .article-image {
+            transform: scale(1.1);
+        }
+        
+        .article-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .article-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+        
+        .article-excerpt {
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: auto;
+        }
+        
+
+        .featured-article {
+            grid-column: span 2;
+        }
+        
+        .featured-article .article-image-container {
+            height: 350px;
+        }
+        
+        .featured-article .article-title {
+            font-size: 2rem;
+        }
+        
+
+        @media (max-width: 900px) {
+            .featured-article {
+                grid-column: span 1;
+            }
+            
+            .featured-article .article-image-container {
+                height: 250px;
+            }
+            
+            .featured-article .article-title {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Tin Tức Mới Nhất</h1>
+            <p class="subtitle">Cập nhật những thông tin nóng hổi và hữu ích</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="news-grid">
+            <article class="article-card featured-article">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Công nghệ mới" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Công nghệ</span>
+                    <h2 class="article-title">iPhone 15 chính thức ra mắt với nhiều cải tiến đột phá</h2>
+                    <p class="article-excerpt">
+                        Apple vừa chính thức trình làng dòng iPhone 15 với thiết kế mới, camera được nâng cấp và chip A16 Bionic mạnh mẽ. 
+                        Đặc biệt, phiên bản Pro Max lần đầu tiên trang bị camera periscope cho khả năng zoom quang học lên đến 10x.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Minh Anh</span>
+                        <span>12/10/2023</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ẩm thực" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Ẩm thực</span>
+                    <h2 class="article-title">Top 10 món ăn đường phố Hà Nội không thể bỏ qua</h2>
+                    <p class="article-excerpt">
+                        Khám phá những món ngon đậm chất Hà Thành từ bình dân đến cao cấp, 
+                        từ phở bò, bún chả đến bánh cuốn Thanh Trì... sẽ khiến thực khách nhớ mãi không quên.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Thu Hà</span>
+                        <span>10/10/2023</span>
+                    </div>
+                </div>
+            </article>
+            
+
+            <article class="article-card">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thể thao" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Thể thao</span>
+                    <h2 class="article-title">Việt Nam giành HCV SEA Games môn bóng đá nam sau 10 năm chờ đợi</h2>
+                    <p class="article-excerpt">
+                        Đội tuyển U22 Việt Nam đã xuất sắc đánh bại Thái Lan với tỷ số 2-1 trong trận chung kết bóng đá nam SEA Games 32, 
+                        mang về tấm HCV đầu tiên sau một thập kỷ.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Văn Toàn</span>
+                        <span>08/10/2023</span>
+                    </div>
+                </div>
+            </article>
+            
+
+            <article class="article-card">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Du lịch" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Du lịch</span>
+                    <h2 class="article-title">Phú Quốc lọt top 10 hòn đảo đẹp nhất thế giới 2023</h2>
+                    <p class="article-excerpt">
+                        Tạp chí du lịch nổi tiếng Travel + Leisure vừa công bố danh sách những hòn đảo đẹp nhất thế giới, 
+                        trong đó Phú Quốc của Việt Nam xếp vị trí thứ 7 với những bãi biển hoang sơ và hệ sinh thái biển đa dạng.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Khánh Linh</span>
+                        <span>05/10/2023</span>
+                    </div>
+                </div>
+            </article>
+            
+
+            <article class="article-card">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Kinh doanh" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Kinh doanh</span>
+                    <h2 class="article-title">VinFast chính thức lên sàn Nasdaq với định giá 23 tỷ USD</h2>
+                    <p class="article-excerpt">
+                        VinFast đã hoàn tất thương vụ sáp nhập SPAC và chính thức giao dịch trên sàn Nasdaq với mã VFS, 
+                        trở thành công ty ô tô điện Việt Nam đầu tiên niêm yết trên thị trường chứng khoán Mỹ.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Trung Hiếu</span>
+                        <span>03/10/2023</span>
+                    </div>
+                </div>
+            </article>
+            
+
+            <article class="article-card">
+                <div class="article-image-container">
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Sức khỏe" class="article-image">
+                </div>
+                <div class="article-content">
+                    <span class="article-category">Sức khỏe</span>
+                    <h2 class="article-title">5 thói quen buổi sáng giúp bạn tràn đầy năng lượng cả ngày</h2>
+                    <p class="article-excerpt">
+                        Uống nước ấm, tập thể dục nhẹ nhàng, ăn sáng đủ chất... là những thói quen đơn giản nhưng mang lại hiệu quả bất ngờ, 
+                        giúp bạn khởi đầu ngày mới tràn đầy năng lượng.
+                    </p>
+                    <div class="article-meta">
+                        <span>Bởi Minh Tú</span>
+                        <span>01/10/2023</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Trang Tin Tức. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
