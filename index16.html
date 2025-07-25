@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng điện thoại</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-image-container {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background: #f9f9f9;
+        }
+        
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .buy-button {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .buy-button:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-image-container {
+                height: 200px;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cửa hàng điện thoại di động</h1>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://i5.walmartimages.com/seo/Restored-Apple-iPhone-14-Pro-Max-128GB-Deep-Purple-Verizon-MQ8R3LL-A-Refurbished_1385d15c-17b0-4392-8fc1-414cae1a51ed.75f6972b7faabe8490df9e82084adf01.jpeg" alt="iPhone 14" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">iPhone 14 128GB</h3>
+                    <p class="product-price">21.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://th.bing.com/th/id/OIP.vFnrE4s4Ezn2p7edyOpkAAHaHm?w=175&h=180&c=7&r=0&o=7&dpr=1.2&pid=1.7&rm=3" alt="Samsung Galaxy S22" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Samsung Galaxy S22 Ultra</h3>
+                    <p class="product-price">30.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://zaakies.com/wp-content/uploads/2023/05/12-pro.jpg" alt="Xiaomi 12" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Xiaomi 12 Pro 5G</h3>
+                    <p class="product-price">19.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://cdn1.productnation.co/stg/sites/4/636c89378e03c.webp" alt="OPPO Find X5" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">OPPO Find X5 Pro</h3>
+                    <p class="product-price">26.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.E-xsoUi_CDiD1Lwj8jMbxAHaHa?r=0&w=600&h=600&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Vivo X80" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Vivo X80 Pro 5G</h3>
+                    <p class="product-price">24.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.Pjizvcf_AwxoM4l-5p-ZZgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Realme GT 2" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Realme GT 2 Pro</h3>
+                    <p class="product-price">16.990.000₫</p>
+                    <a href="#" class="buy-button">Mua ngay</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 Cửa hàng điện thoại di động. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
