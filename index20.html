@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Cá Nhân</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f6fb;
+            margin: 0;
+            padding: 0;
+        }
+        .cv-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 32px 24px 24px 24px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 32px;
+        }
+        .cv-left {
+            border-right: 2px solid #e0e7ff;
+            padding-right: 24px;
+        }
+        .cv-right {
+            padding-left: 24px;
+        }
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6c63ff;
+            margin-bottom: 18px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .name {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2d3a4b;
+            margin-bottom: 8px;
+        }
+        .job-title {
+            text-align: center;
+            color: #6c63ff;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+        .section {
+            margin-bottom: 28px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4a5a6a;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .info-item, .exp-item, .skill-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .info-item i, .exp-item i, .skill-item i {
+            color: #6c63ff;
+            font-size: 1.2rem;
+            min-width: 22px;
+        }
+        .info-content, .exp-content, .skill-content {
+            color: #2d3a4b;
+            font-size: 1rem;
+        }
+        .exp-title {
+            font-weight: 600;
+            color: #2d3a4b;
+        }
+        .exp-time {
+            color: #6c63ff;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+        .skill-bar {
+            background: #e0e7ff;
+            border-radius: 8px;
+            height: 8px;
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 2px;
+            overflow: hidden;
+        }
+        .skill-level {
+            background: linear-gradient(90deg, #6c63ff 60%, #a5b4fc 100%);
+            height: 100%;
+        }
+        @media (max-width: 900px) {
+            .cv-container { grid-template-columns: 1fr; gap: 0; padding: 12px; }
+            .cv-left, .cv-right { padding: 0; border: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <div class="cv-left">
+            <div class="name">Lê Trần Bảo An</div>
+            <div class="section info">
+                <div class="section-title">Thông tin cá nhân</div>
+                <div class="info-item"><strong>Địa chỉ:</strong><div class="info-content">248 đường số 2, khu nhà ở đường sắt, Dĩ An, Bình Dương</div></div>
+                <div class="info-item"><strong>Điện thoại:</strong><div class="info-content">0902701707</div></div>
+                <div class="info-item"><strong>Email:</strong><div class="info-content">letranbaoan2005@gmail.com</div></div>
+                <div class="info-item"><strong>Ngày sinh:</strong><div class="info-content">05/07/2005</div></div>
+            </div>
+        </div>
+        <div class="cv-right">
+            <div class="section">
+                <div class="section-title">Kỹ năng</div>
+                <ul>
+                    <li>Lập trình HTML, CSS, JavaScript cơ bản</li>
+                    <li>Thành thạo Microsoft Office (Word, Excel, PowerPoint)</li>
+                    <li>Kỹ năng giao tiếp và làm việc nhóm tốt</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="section-title">Kinh nghiệm làm việc</div>
+                <ul>
+                    <li><strong>2023 - Nay:</strong> Nhân viên Kinh doanh Thương mại điện tử tại công ty XYZ</li>
+                    <li><strong>2021 - 2023:</strong> Thực tập sinh Thương mại điện tử tại công ty ABC</li>
+                </ul>
+            </div>
+            <div class="section">
+                <div class="section-title">Học vấn</div>
+                <ul>
+                    <li><strong>2019 - 2023</strong>: Đại học Công nghiệp TP.HCM - Chuyên ngành TMDT</li>
+                    <li><strong>2016 - 2019</strong>: Trường THCS/THPT Hoa Sen</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
